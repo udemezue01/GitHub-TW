@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub User Search</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="app.js"></script>
+</head>
+<body class="bg-gray-100">
+
+    <!-- Main Container -->
+    <div class="container mx-auto py-10">
+        <h1 class="text-4xl font-bold text-center text-gray-800 mb-8">GitHub User Search</h1>
+
+        <!-- Search Form -->
+        <div class="flex justify-center mb-6">
+            <input
+                id="search-input"
+                type="text"
+                class="border-2 border-gray-300 p-2 w-full max-w-lg rounded-md shadow-sm"
+                placeholder="Enter GitHub username"
+            />
+            <button
+                id="search-btn"
+                class="ml-4 bg-gray-800 text-white p-2 rounded-md hover:bg-gray-700"
+            >
+                Search
+            </button>
+        </div>
+
+        <!-- User Profile Section -->
+        <div id="user-profile" class="hidden">
+            <div class="flex justify-center">
+                <div class="bg-white p-6 rounded-lg shadow-lg w-full max-w-md">
+                    <img id="avatar" class="w-32 h-32 rounded-full mx-auto" src="" alt="GitHub Avatar">
+                    <h2 id="username" class="text-2xl font-bold text-center mt-4"></h2>
+                    <p id="bio" class="text-center text-gray-600 mt-2"></p>
+                    <div class="flex justify-around mt-4">
+                        <div>
+                            <span id="repos" class="text-lg font-semibold"></span>
+                            <p class="text-gray-500">Repositories</p>
+                        </div>
+                        <div>
+                            <span id="followers" class="text-lg font-semibold"></span>
+                            <p class="text-gray-500">Followers</p>
+                        </div>
+                        <div>
+                            <span id="following" class="text-lg font-semibold"></span>
+                            <p class="text-gray-500">Following</p>
+                        </div>
+                    </div>
+                    <a id="profile-link" href="#" target="_blank" class="block mt-6 text-center bg-gray-800 text-white py-2 rounded-md hover:bg-gray-700">View Profile</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Error Message -->
+        <div id="error-message" class="hidden text-center text-red-500 font-semibold mt-6"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
